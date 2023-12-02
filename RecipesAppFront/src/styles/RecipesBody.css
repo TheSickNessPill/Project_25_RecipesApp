@@ -1,0 +1,31 @@
+.recipes-body{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.dishes-list{
+    max-width: 250px;
+    min-width: 250px;
+}
+
+.dishes-list ul li:first-child{
+    font-size: 1.9em;
+    color: brown;
+    text-decoration: underline;
+}
+
+.dishes-list ul li{
+    font-size: 1.25em;
+    color: brown;
+}
+
+.dishes-list ul li a{
+    text-decoration: none;
+    font-style: normal;
+    color: black;
+}
+
+.dishes-list ul li a:hover{
+    text-decoration: underline;
+}

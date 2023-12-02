@@ -1,0 +1,49 @@
+openapi: 3.0.0
+info:
+  title: Сайт Рецептов - OpenAPI 3.0
+  description: Сайт Рецептов
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000/recipes
+    description: Dev server
+
+paths:
+  /:
+    get:
+      tags:
+        - categories list
+      summary: get list of categories
+      parameters: []
+      responses:
+        '200':
+          description: successful operation
+
+  /categories/:
+    get:
+      tags:
+        - recipes by category
+      summary: get recipes list by category name
+      parameters:
+        - name: category
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+
+  /dishinfo/:
+    get:
+      tags:
+        - Dish info
+      summary: get dish info by dish name
+      parameters:
+        - name: dishname
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
